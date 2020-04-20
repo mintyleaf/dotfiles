@@ -1,0 +1,10 @@
+#!/bin/bash
+alias bri='~/.scripts/bri.sh'
+alias ls='ls --color=auto'
+alias vid='ffmpeg -hide_banner -an -y -f x11grab -video_size 1920x1080 -i :0.0 -pix_fmt yuv420p -framerate 30 ~/Videos/"$(date +%H-%M-%S-%F)".mp4'
+alias vid_win='eval $(xdotool selectwindow getwindowgeometry --shell) && ffmpeg -hide_banner -an -y -f x11grab -video_size "$(echo "$WIDTH + $WIDTH % 2" | bc)"x"$(echo "$HEIGHT + $HEIGHT % 2" | bc)" -i :0.0+"$X","$Y" -pix_fmt yuv420p -framerate 30 ~/Videos/"$(date +%H-%M-%S-%F)".mp4'
+alias mkclean='make clean && make && sudo make install'
+alias mk='make && sudo make install'
+alias slock='~/.scripts/slock.sh'
+alias chwp='wal -i "${HOME}/Wallpapers" --iterative --saturate 0.5 --backend colorz -o "${HOME}/.scripts/walext.sh"'
+alias pom='~/.scripts/pomodoro.sh'
