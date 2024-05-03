@@ -1,0 +1,155 @@
+{
+	"position": "bottom",
+	"height": 30,
+	"spacing": 0,
+	"width": 1152,
+	"modules-left": [
+		"hyprland/workspaces",
+		"mpris"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"custom/polycat",
+		"group/network",
+		"group/power"
+	],
+	"group/network": {
+		"orientation": "inherit",
+		"drawer": {
+        	"transition-duration": 300,
+        	"children-class": "network-drawer-child",
+        	"transition-left-to-right": false
+    	},
+    	"modules": [
+    		"network",
+    		"bluetooth"
+    	]
+	},
+	"group/power": {
+		"orientation": "inherit",
+		"drawer": {
+        	"transition-duration": 300,
+        	"children-class": "power-drawer-child",
+        	"transition-left-to-right": false
+    	},
+    	"modules": [
+			"battery",
+			"idle_inhibitor",
+			"power-profiles-daemon",
+			"custom/dark-switcher"
+    	]
+	},
+	// Modules configuration
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": "\ueb8a",
+			"sort-by-number": true
+		}
+	},
+	"custom/dark-switcher": {
+		"interval": "once",
+		"signal": 8,
+		"return-type": "text",
+		"exec": "~/.bin/toggle_dark_front.sh",
+		"on-click": "~/.bin/toggle_dark.sh",
+		"tooltip": false
+	},
+	"custom/polycat": {
+		"exec": "/sbin/polycat",
+		"tooltip": false
+	},
+	"clock": {
+		"format": "{:%a %d,  %H:%M}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}  {capacity}%",
+		"format-alt": "{icon}  {time}",
+		"format-charging": "󰂄  {capacity}%",
+		"format-plugged": "󱧦  {capacity}%",
+		"format-full": "",
+		"format-icons": [
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+			"󰁿",
+			"󰂀",
+			"󰂁",
+			"󰂂",
+			"󰁹"
+		]
+	},
+	"network": {
+		"format": "{ifname}",
+		"format-wifi": "{icon}   {essid}",
+		"format-ethernet": "    {ipaddr}",
+		"format-disconnected": "",
+		"format-icons": [
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
+		"tooltip-format": "{ifname} via {gwaddr}",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%)",
+		"tooltip-format-ethernet": "{ifname}",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"mpris": {
+		"format": "󰏤   {dynamic}",
+		"format-paused": "󰐊   {dynamic}",
+		"format-stopped": " ",
+		"tooltip-format": "{dynamic}",
+		"dynamic-separator": "  -  ",
+		"dynamic-order": [
+			"title",
+			"artist",
+			"album"
+		],
+		"dynamic-len": 40
+	},
+	"bluetooth": {
+		"format": "󰂯",
+		"format-off": "󰂲",
+		"format-disabled": " ",
+		"format-connected": "󰂯   {device_alias}",
+		"format-connected-battery": "󰂯   {device_alias}  {device_battery_percentage}%",
+		"on-click": "~/.bin/bluetoggle.sh",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+	},
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": ""
+		}
+	}
+}

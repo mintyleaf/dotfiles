@@ -1,0 +1,14 @@
+notify = true
+use_nerdfont = true
+flip_status_indicators = true
+
+[theme]
+title = "dark green"
+playing_bg = "black"
+highlight_bg = "#484848"
+error_bg = "red"
+statusbar_bg = "green"
+statusbar_progress = "green"
+statusbar = "#000000"
+cmdline = "#000000"
+cmdline_bg = "black"

@@ -1,0 +1,5 @@
+timeout=300
+bar_color=000000
+border_color=505050
+background_color=FFFFFF
+bar_padding=4

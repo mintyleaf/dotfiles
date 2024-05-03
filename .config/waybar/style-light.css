@@ -1,0 +1,77 @@
+* {
+    font-family: Cantarell Nerd Font, polycat;
+    font-size: 11pt;
+}
+
+window#waybar {
+    color: black;
+	background-color: #FFFFFF;
+	border-radius: 8px 8px 0px 0px;
+	border-width: 2px;
+	border-bottom: 0px;
+	border-style: solid;
+	border-color: #9F9F9F;
+}
+
+tooltip label {
+    color: black;
+    text-shadow: none;
+}
+
+tooltip {
+	background: #FFFFFF;
+	border-radius: 8px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #9F9F9F;
+}
+
+#workspaces {
+	padding: 4px 0px;
+	padding-right: 12px;
+	margin-left: 12px;
+	margin-top: 3px;
+}
+
+#workspaces button {
+	color: black;
+	border: none;
+}
+
+#workspaces button:hover {
+	background: #9F9F9F;
+}
+
+#clock, #battery, #custom-polycat, #custom-weather, #bluetooth, #power-profiles-daemon, #mpris, #idle_inhibitor {
+	margin-top: 2px;
+	padding-right: 20px;
+}
+
+#custom-dark-switcher {
+	margin-top: 2px;
+	padding-right: 24px;
+}
+
+#network {
+	margin-top: 2px;
+	padding-right: 10px;
+	min-width: 100px;
+}
+
+#custom-polycat {
+	font-size: 24px;
+	margin-bottom: 2px;
+	margin-right: 1px;
+}
+
+#battery.charging {
+    color: #64924e;
+}
+
+#battery.warning:not(.charging) {
+	color: #9b7b1b
+}
+
+#battery.critical:not(.charging) {
+	color: #f40b1b
+}
