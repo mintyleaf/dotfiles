@@ -2,6 +2,7 @@
 	"position": "bottom",
 	"height": 30,
 	"spacing": 0,
+	"exclusive": true,
 	"width": 1152,
 	"modules-left": [
 		"hyprland/workspaces",
@@ -17,9 +18,9 @@
 	],
 	"group/network": {
 		"orientation": "inherit",
+
 		"drawer": {
         	"transition-duration": 300,
-        	"children-class": "network-drawer-child",
         	"transition-left-to-right": false
     	},
     	"modules": [
@@ -31,7 +32,6 @@
 		"orientation": "inherit",
 		"drawer": {
         	"transition-duration": 300,
-        	"children-class": "power-drawer-child",
         	"transition-left-to-right": false
     	},
     	"modules": [
@@ -96,7 +96,7 @@
 		"format": "{ifname}",
 		"format-wifi": "{icon}   {essid}",
 		"format-ethernet": "    {ipaddr}",
-		"format-disconnected": "",
+		"format-disconnected": "󰌙 ",
 		"format-icons": [
 			"󰤟",
 			"󰤢",

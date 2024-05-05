@@ -42,20 +42,9 @@ tooltip {
 	background: #9F9F9F;
 }
 
-#clock, #battery, #custom-polycat, #custom-weather, #bluetooth, #power-profiles-daemon, #mpris, #idle_inhibitor {
+#clock, #custom-polycat, #mpris, #network label, #bluetooth, #battery, #idle_inhibitor, #power-profiles-daemon, #custom-dark-switcher {
 	margin-top: 2px;
 	padding-right: 20px;
-}
-
-#custom-dark-switcher {
-	margin-top: 2px;
-	padding-right: 24px;
-}
-
-#network {
-	margin-top: 2px;
-	padding-right: 10px;
-	min-width: 100px;
 }
 
 #custom-polycat {
