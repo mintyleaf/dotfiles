@@ -78,7 +78,7 @@
 		"format-alt": "{icon}  {time}",
 		"format-charging": "󰂄  {capacity}%",
 		"format-plugged": "󱧦  {capacity}%",
-		"format-full": "",
+		"format-full": "󰂄",
 		"format-icons": [
 			"󰁺",
 			"󰁻",
